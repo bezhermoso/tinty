@@ -19,6 +19,9 @@ For more general usage, look at the [Usage section] in [README.md].
 - [dunst](#dunst)
 - [delta](#delta)
 
+### Other tools
+- [base16-nvim](#base16-nvim)
+
 ## Shell completions
 
 You can generate shell completions with the `generate-completion`
@@ -535,6 +538,21 @@ Configure [delta] as your Git pager and/or difftool under the name `delta`, like
 [include]
 	path = ~/.local/share/tinted-theming/tinty/tinted-delta-configs-file.gitconfig
 ```
+
+## base16-nvim
+
+if you use RRethy's [base16-nvim] as your colorscheme in Neovim, you can use this as an alternative to
+`tinted-theming/base16-vim`:
+
+```toml
+[[items]]
+path = "https://github.com/bezhermoso/tinted-base16.nvim"
+name = "base16.nvim"
+themes-dir = "themes"
+hook = "cp -f %f ~/.config/tinted-theming/set_theme.lua"
+supported-systems = ["base16"]
+```
+
 [Usage section]: https://github.com/tinted-theming/tinty?tab=readme-ov-file#usage
 [README.md]: https://github.com/tinted-theming/tinty/blob/main/README.md
 [bat]: https://github.com/sharkdp/bat
@@ -549,3 +567,4 @@ Configure [delta] as your Git pager and/or difftool under the name `delta`, like
 [contrib/completion]: contrib/completion
 [base16-qutebrowser]: https://github.com/tinted-theming/base16-qutebrowser
 [delta]: https://github.com/dandavison/delta
+[base16-nvim]: https://github.com/RRethy/base16-nvim
